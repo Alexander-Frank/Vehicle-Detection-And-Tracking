@@ -1,7 +1,6 @@
 # make a nice and clean pipeline, so that the notebook can be run from this point
 
 import matplotlib
-%matplotlib inline
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import numpy as np
@@ -235,4 +234,4 @@ def process_image(img, carfinder=carfinder):
 video_out = 'output_project_video.mp4'
 clip = VideoFileClip("project_video.mp4")
 video_clip = clip.fl_image(process_image)
-%time video_clip.write_videofile(video_out, audio=False)
+video_clip.write_videofile(video_out, audio=False, verbose=1)
